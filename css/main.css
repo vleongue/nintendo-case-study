@@ -1,7 +1,9 @@
 :root {
     --font-sans-serif: "museo-sans", sans-serif;
     --dark-gray-1: #484848;
+    --light-gray-1: #f8f8f8;
     --red: #d12f25;
+    --blue: #505dc7; 
 }
 
 /* Typography Defaults */
@@ -32,6 +34,7 @@ h4 {
 a {
     color: var(--red);
     font-weight: 500;
+    text-decoration: none;
 }
 
 img {
@@ -50,6 +53,47 @@ img {
     overflow-x: auto;
 }
 
+.component__img-button img {
+    display: inline-block;
+}
+
 .component__code {
     border: 1px solid #ccc;
+}
+
+
+
+.button {
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem;
+    color: white;
+    background: var(--red);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.button--clear {
+    border: 1px solid var(--red);
+    color: var(--red);
+    background: none;
+    font-size: 0.87rem;
+}
+
+.button--large {
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+}
+
+.button--blue {
+    background: var(--blue);
+}
+
+.button--icon {
+    background: var(--light-gray-1);
+    color: var(--dark-gray-1);
+    font-size: 1rem;
+    padding: 0.4rem 0.7rem;
 }
