@@ -3,6 +3,7 @@
     --dark-gray-1: #484848;
     --light-gray-1: #f8f8f8;
     --red: #d12f25;
+    --dark-red: #9c211a;
     --blue: #505dc7; 
 }
 
@@ -31,10 +32,24 @@ h4 {
     font-size: 1.1rem; 
 }
 
+
 a {
-    color: var(--red);
-    font-weight: 500;
+    color: var(--dark-gray-1);
+    font-weight: 700;
     text-decoration: none;
+}
+
+a p {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+a:hover :is(h1,h2,h3,h4) {
+    color: var(--red);
+}
+
+a:hover p {
+    color: var(--dark-red);
 }
 
 img {
@@ -61,7 +76,7 @@ img {
     border: 1px solid #ccc;
 }
 
-
+/* Buttons */
 
 .button {
     border: none;
@@ -87,6 +102,10 @@ img {
     padding: 0.8rem 1.5rem;
 }
 
+a:hover .button--large {
+    background: var(--dark-red);
+}
+
 .button--blue {
     background: var(--blue);
 }
@@ -96,4 +115,18 @@ img {
     color: var(--dark-gray-1);
     font-size: 1rem;
     padding: 0.4rem 0.7rem;
+}
+
+/* Footer */
+
+
+footer > a:hover :is(h1,h2,h3,h4) {
+    text-decoration: underline var(--dark-red);
+    color: var(--dark-gray-1);
+}
+
+/* Section */
+
+section > a:hover {
+    background: var(--dark-red);
 }
