@@ -3,13 +3,53 @@
     --dark-gray-1: #484848;
     --red: #d12f25;
 }
+
+/* Typography Defaults */
+
 body {
     font-family: var(--font-sans-serif);
     color: var(--dark-gray-1);
     line-height: 1.5;
 }
 
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+h4 {
+    font-size: 1.1rem; 
+}
+
 a {
     color: var(--red);
-    font-weight: 700;
+    font-weight: 500;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Components */
+
+.component img {
+    max-width: initial;
+}
+
+.component__img {
+    border: 1px solid #ccc;
+    overflow-x: auto;
+}
+
+.component__code {
+    border: 1px solid #ccc;
 }
