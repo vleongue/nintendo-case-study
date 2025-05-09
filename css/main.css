@@ -4,7 +4,7 @@
     --dark-gray-2: #242424;
     --light-gray-1: #f8f8f8;
     --light-gray-2: #ececec;
-    --red: #d12f25;
+    --red: #e60012;
     --dark-red: #9c211a;
     --blue: #505dc7; 
     --white: #ffffff;
@@ -25,6 +25,7 @@ h1, h2, h3, h4 {
 
 h2 {
     font-size: 1.8rem;
+    padding-top: 2rem;
 }
 
 h3 {
@@ -60,6 +61,24 @@ img {
     display: block;
 }
 
+.content-wrap {
+    margin: auto 7rem;
+}
+
+.wrap {
+    margin: auto;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid var(--light-gray-2);
+    margin-top: 2rem;
+}
+
+.hr--short{
+    margin: 2rem 3rem;
+}
+
 /* Components */
 
 .component img {
@@ -91,11 +110,15 @@ img {
     font-weight: 700;
 }
 
+.button--gray {
+    color: var(--dark-gray-2);
+    background: var(--light-gray-1);
+}
+
 .button--clear {
     border: 1px solid var(--red);
     color: var(--red);
     background: none;
-    font-size: 0.87rem;
 }
 
 .button--large {
@@ -117,7 +140,7 @@ a:hover .button--large {
     background: var(--light-gray-1);
     color: var(--dark-gray-1);
     font-size: 1rem;
-    padding: 0.4rem 0.7rem;
+    padding: 0.3rem 0rem;
 }
 
 
@@ -130,7 +153,7 @@ section > a:hover {
 /* Card */
 
 .card {
-    border: 0.1rem solid var(--dark-gray-1);
+    border: 0.1rem solid var(--light-gray-2);
     padding: 0rem;
     text-align: left;
     border-radius: 1rem;
@@ -140,10 +163,19 @@ section > a:hover {
     margin: 1rem 0;
 }
 
+.card--sqaure {
+    max-width: 274px;
+    height: 274px;
+}
+
+.card--square--small {
+    width: 58.8px;
+    height: 58.8px;
+}
+
 .card h4 {
     padding: 0 1rem;
 }
-
 
 .card-text {
     padding: 0 1rem;
@@ -160,25 +192,31 @@ section > a:hover {
     border-radius: 1rem 1rem 0 0;
 }
 
-
 .zoom-img {
     overflow: hidden;
+    border-radius: 1rem 1rem;
+}
+
+.zoom-img--alt {
     border-radius: 1rem 1rem 0 0;
 }
   
-  .zoom-img img {
+.zoom-img img {
     transition: all .1s ease-in-out;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
   
-  .zoom-img img:hover   {
+.zoom-img img:hover   {
     transform: scale(1.05);
 }
 
 .carousel {
     display: flex;
     gap: 2rem;
+    justify-content: center;
 }
-
 
 /* Section */
 
@@ -192,9 +230,8 @@ section > a:hover {
     gap: 1rem;
     align-items: center;
     grid-template-columns: repeat(1, 1fr);
-    width: 55rem;
-    max-width: 100%;
-    justify-items: center;
+    width: 100%;
+    justify-content: center;
 }
 
 
@@ -206,14 +243,68 @@ section > a:hover {
     .section {
         display: grid;
         grid-gap: 1rem;
-        grid-template-columns: 4fr 1fr;
+        grid-template-columns: auto 1fr;
         padding: 0 1rem;
-        align-items: left;
-        width: 55rem;
-        max-width: 100%;
+        max-width: 1144px;
+        justify-content: center;
+        justify-items: end;
     }
 
+    .sectionwrap {
+        justify-items: center;
     }
+    }
+
+/* Nav Bar */
+
+.logo {
+    background: var(--red);
+    padding: 0.5rem 1rem;
+  }  
+
+.site-name {
+    font-size: 0.8rem;
+    color: var(--white);
+    border: 2pt solid var(--white);
+    border-radius: 20px;
+    padding: 0.1rem 0.3rem;;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+  
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+.nav-list li {
+    margin-left: 0.5rem;
+  }
+  
+.nav-list a {
+    display: inline-block;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: var(--gray-dark);
+  }
+  
+  .nav-L {
+    color: var(--red);
+  }
+
 
 /* Footer */
 
@@ -246,7 +337,6 @@ footer a:hover :is(h1,h2,h3,h4) {
 
 footer li {
     list-style: none;
-    list-style-position: outside;
 }
 
 .footer__list__heading {
@@ -297,13 +387,11 @@ footer li {
     display: flex;
     justify-content: center;
     grid-column: 1 / -1;
+    margin-top: 6rem;
 }
 
-.site-name {
-    color: var(--white);
-    border: 2pt solid var(--white);
-    border-radius: 20px;
-    padding: 0.1rem 0.3rem;
+.site-name--big {
+    font-size: 2rem;
     width: 11rem;
     text-align: center;
 }
@@ -383,4 +471,11 @@ footer li {
         font-size: 0.75rem;
         padding: 1rem 0;
     }
+}
+
+/* Hero */
+
+.hero img {
+    padding-top: 0.1rem;
+    width: 100%;
 }
